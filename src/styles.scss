@@ -79,6 +79,10 @@ body {
   @extend .flex-container;
   max-width: $container-max-width;
   width: 100%;
+
+  &.text-content {
+    max-width: 800px;
+  }
 }
 
 .text-center {

@@ -1,7 +1,44 @@
 <div class="page-container">
   <app-banner></app-banner>
-  <div class="introduction-container">brand introduction</div>
-  <div class="feature-products-container">feature products</div>
-  <div class="highlight-container">highlights</div>
-  <div style="height: 5000px; border: 5px solid red"></div>
+
+  <div class="introduction-container flex-container center section">
+    <div
+      class="brand-introduction container text-content text-center flex-column"
+    >
+      <h1 class="mat-display-1">Giới thiệu về Kinh Đô Thiệp Cưới</h1>
+      <span>
+        Mô tả thương hiệu Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Sunt officiis et quas. Ex sed voluptas placeat doloribus atque
+        quis a cum, fugit tempora commodi! Iusto iste amet ex odit optio! Qui,
+        ab nobis! Nesciunt corrupti, officiis assumenda dolores ipsam
+        perspiciatis tempore odio porro quam atque molestiae laborum quaerat
+        quod quos ullam minus pariatur esse autem rerum unde incidunt! Deserunt,
+        accusantium.
+      </span>
+    </div>
+  </div>
+
+  <div class="feature-products-container flex-container center section">
+    <div class="container flex-column">
+      <h2>Sản phẩm nổi bật</h2>
+      <div class="feature-products"></div>
+    </div>
+  </div>
+
+  <div class="highlight-container flex-container center section">
+    <div class="container flex-column">
+      <h2>Vì sao nên chọn dịch vụ của Kinh Đô Thiệp Cưới?</h2>
+      <div class="flex-row-md">
+        <div *ngFor="let i of [1, 2, 3]" class="flex-item text-center">
+          <h3>Lý do {{ i }}</h3>
+          <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+            beatae, odio fugit id consequuntur ratione praesentium deleniti
+            voluptatum soluta eos vitae enim repellat maxime possimus cumque
+            quisquam quidem expedita ipsam.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
