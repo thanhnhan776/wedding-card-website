@@ -6,13 +6,13 @@ import { SharedModule } from './shared/shared.module';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () =>
-      import('./pages/home/home.module').then((m) => m.HomeModule),
+    redirectTo: 'home',
     pathMatch: 'full',
   },
   {
     path: 'home',
-    redirectTo: '',
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'cards',

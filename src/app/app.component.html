@@ -1,7 +1,20 @@
 <div class="app-container">
-  <app-header ngxHideOnScroll></app-header>
+  <app-header
+    ngxHideOnScroll
+    [isSidnavOpen]="isSidnavOpen"
+    (menuToggle)="sidenav.toggle()"
+  ></app-header>
   <div class="main-content-container">
-    <router-outlet></router-outlet>
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #sidenav [autoFocus]="false" [(opened)]="isSidnavOpen">
+        <app-sidenav-menu></app-sidenav-menu>
+      </mat-sidenav>
+      <mat-sidenav-content class="sidenav-content">
+        <div class="sidenav-content-main-container">
+          <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
   </div>
-  <app-footer></app-footer>
 </div>

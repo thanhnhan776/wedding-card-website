@@ -63,6 +63,7 @@ body {
 }
 
 .main-content-container {
+  @extend .d-flex;
   flex: 1;
 }
 

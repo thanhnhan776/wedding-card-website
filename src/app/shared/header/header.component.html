@@ -1,18 +1,44 @@
 <mat-toolbar>
   <mat-toolbar-row>
-    <div class="container">
-      <span class="page-logo">
-        <img src="assets/logo-s.jpg" alt="page-logo" />
-      </span>
-      <span class="page-title">Kinh Đô Thiệp Cưới</span>
-      <div class="search-bar-container">
-        <mat-form-field appearance="outline">
+    <div class="container header-container">
+      <div class="sidenav-toggle hide-lg">
+        <button mat-icon-button (click)="menuClick()">
+          <mat-icon> {{ isSidnavOpen ? "close" : "menu" }} </mat-icon>
+        </button>
+      </div>
+
+      <div class="brand flex-row">
+        <span class="page-logo">
+          <img src="assets/logo-s.jpg" alt="page-logo" />
+        </span>
+        <span class="page-title">Kinh Đô Thiệp Cưới</span>
+      </div>
+
+      <div class="menu flex-row show-lg">
+        <ng-container *ngFor="let menuItem of menu">
+          <span class="menu-item">
+            <a
+              mat-button
+              [routerLink]="menuItem.url"
+              routerLinkActive="active-menu"
+            >
+              {{ menuItem.label }}
+            </a>
+          </span>
+        </ng-container>
+      </div>
+
+      <div class="action-buttons">
+        <!-- <mat-form-field appearance="outline">
           <input matInput type="text" placeholder="Tìm kiếm" />
-        </mat-form-field>
+        </mat-form-field> -->
+        <button mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
       </div>
     </div>
   </mat-toolbar-row>
-  <mat-toolbar-row>
+  <!-- <mat-toolbar-row>
     <div class="container">
       <ng-container *ngFor="let menuItem of menu">
         <span>
@@ -20,5 +46,5 @@
         </span>
       </ng-container>
     </div>
-  </mat-toolbar-row>
+  </mat-toolbar-row> -->
 </mat-toolbar>
