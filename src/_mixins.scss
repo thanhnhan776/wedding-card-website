@@ -1,0 +1,20 @@
+@import "global-vars";
+
+$breakpoints: (
+  "xs": $breakpoint-xs,
+  "xm": $breakpoint-xm,
+  "xl": $breakpoint-xl,
+  "md": $breakpoint-md,
+  "lg": $breakpoint-lg,
+) !default;
+
+@mixin breakpoint($bp) {
+  @if map-has-key($map: $breakpoints, $key: $bp) {
+    @media (max-width: map-get($breakpoints, $bp)) {
+      @content;
+    }
+  } @else {
+    @error "NOT FOUND `#{$bp}`."
+    + " Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

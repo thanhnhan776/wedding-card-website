@@ -1,7 +1,13 @@
 @import "global-vars";
+@import "mixins";
 
 .d-flex {
   display: flex;
+}
+
+.flex-center {
+  @extend .d-flex;
+  justify-content: center;
 }
 
 .flex-column {
@@ -15,33 +21,33 @@
 
   &-xs {
     @extend .flex-row;
-    @media only screen and (max-width: $breakpoint-xs) {
+    @include breakpoint("xs") {
       flex-direction: column;
     }
   }
 
   &-xm {
     @extend .flex-row;
-    @media only screen and (max-width: $breakpoint-xm) {
+    @include breakpoint("xm") {
       flex-direction: column;
     }
   }
 
   &-xl {
     @extend .flex-row;
-    @media only screen and (max-width: $breakpoint-xl) {
+    @include breakpoint("xl") {
       flex-direction: column;
     }
   }
   &-md {
     @extend .flex-row;
-    @media only screen and (max-width: $breakpoint-md) {
+    @include breakpoint("md") {
       flex-direction: column;
     }
   }
   &-lg {
     @extend .flex-row;
-    @media only screen and (max-width: $breakpoint-lg) {
+    @include breakpoint("lg") {
       flex-direction: column;
     }
   }
