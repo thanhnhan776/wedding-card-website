@@ -1,0 +1,52 @@
+@import "global-vars";
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  @extend .d-flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  @extend .d-flex;
+  flex-direction: row;
+
+  &-xs {
+    @extend .flex-row;
+    @media only screen and (max-width: $breakpoint-xs) {
+      flex-direction: column;
+    }
+  }
+
+  &-xm {
+    @extend .flex-row;
+    @media only screen and (max-width: $breakpoint-xm) {
+      flex-direction: column;
+    }
+  }
+
+  &-xl {
+    @extend .flex-row;
+    @media only screen and (max-width: $breakpoint-xl) {
+      flex-direction: column;
+    }
+  }
+  &-md {
+    @extend .flex-row;
+    @media only screen and (max-width: $breakpoint-md) {
+      flex-direction: column;
+    }
+  }
+  &-lg {
+    @extend .flex-row;
+    @media only screen and (max-width: $breakpoint-lg) {
+      flex-direction: column;
+    }
+  }
+}
+
+.flex-item {
+  flex: 1;
+}

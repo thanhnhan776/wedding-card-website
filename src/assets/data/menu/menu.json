@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Trang Chủ",
+    "url": "/home"
+  },
+  {
+    "label": "Thiệp Cưới",
+    "url": "/cards"
+  },
+  {
+    "label": "Liên Hệ",
+    "url": "/contact"
+  }
+]
