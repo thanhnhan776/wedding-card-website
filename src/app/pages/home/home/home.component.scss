@@ -1,0 +1,19 @@
+.brand-introduction {
+  margin: 20px;
+}
+
+.feature-products {
+  background-color: rgb(150, 186, 240);
+  height: 500px;
+}
+
+.section {
+  margin-top: 70px;
+  padding: 0 20px;
+}
+
+.highlight-container {
+  [class^="flex-row"] {
+    gap: 40px;
+  }
+}
