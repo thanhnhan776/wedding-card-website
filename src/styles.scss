@@ -67,7 +67,7 @@ body {
 }
 
 .flex-container {
-  display: flex;
+  @extend .d-flex;
 
   &.center {
     justify-content: center;
