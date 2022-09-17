@@ -3,3 +3,17 @@ app-header {
   top: 0;
   transition: transform 0.15s ease-in-out;
 }
+
+.sidenav-container {
+  flex: 1;
+
+  .sidenav-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .sidenav-content-main-container {
+    flex: 1;
+  }
+}

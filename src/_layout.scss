@@ -1,6 +1,8 @@
 @import "global-vars";
 @import "mixins";
 
+$breakpoint-keys: "xs", "xm", "xl", "md", "lg";
+
 .d-flex {
   display: flex;
 }
@@ -19,40 +21,39 @@
   @extend .d-flex;
   flex-direction: row;
 
-  &-xs {
-    @extend .flex-row;
-    @include breakpoint("xs") {
-      flex-direction: column;
-    }
-  }
-
-  &-xm {
-    @extend .flex-row;
-    @include breakpoint("xm") {
-      flex-direction: column;
-    }
-  }
-
-  &-xl {
-    @extend .flex-row;
-    @include breakpoint("xl") {
-      flex-direction: column;
-    }
-  }
-  &-md {
-    @extend .flex-row;
-    @include breakpoint("md") {
-      flex-direction: column;
-    }
-  }
-  &-lg {
-    @extend .flex-row;
-    @include breakpoint("lg") {
-      flex-direction: column;
+  @each $bp-key in $breakpoint-keys {
+    &-#{$bp-key} {
+      @extend .flex-row;
+      @include breakpoint($bp-key) {
+        flex-direction: column;
+      }
     }
   }
 }
 
 .flex-item {
   flex: 1;
+}
+
+.hide {
+  display: none;
+
+  @each $bp-key in $breakpoint-keys {
+    &-#{$bp-key} {
+      @extend .hide;
+      @include breakpoint($bp-key) {
+        display: block;
+      }
+    }
+  }
+}
+
+.show {
+  @each $bp-key in $breakpoint-keys {
+    &-#{$bp-key} {
+      @include breakpoint($bp-key) {
+        display: none;
+      }
+    }
+  }
 }

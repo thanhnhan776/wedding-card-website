@@ -1,0 +1,14 @@
+<div class="sidenav-container flex-column">
+  <ng-container *ngFor="let menuItem of menu">
+    <span class="flex-item menu-item">
+      <a
+        mat-button
+        [routerLink]="menuItem.url"
+        routerLinkActive="active-menu"
+        class="menu-button"
+      >
+        {{ menuItem.label }}
+      </a>
+    </span>
+  </ng-container>
+</div>

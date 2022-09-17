@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { MenuItem } from 'src/app/data/menu/menu';
 import { MenuService } from 'src/app/data/menu/menu.service';
 
@@ -8,6 +8,9 @@ import { MenuService } from 'src/app/data/menu/menu.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @Input() isSidnavOpen = false;
+  @Output() menuToggle = new EventEmitter<void>();
+
   menu: MenuItem[] = [];
 
   constructor(private menuService: MenuService) {}
@@ -16,5 +19,9 @@ export class HeaderComponent implements OnInit {
     this.menuService.getMenu().subscribe((menu: MenuItem[]) => {
       this.menu = menu;
     });
+  }
+
+  menuClick(): void {
+    this.menuToggle.emit();
   }
 }

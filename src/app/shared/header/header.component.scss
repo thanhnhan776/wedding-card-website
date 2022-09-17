@@ -1,3 +1,5 @@
+@import "../../../mixins";
+
 :host {
   z-index: 100;
 }
@@ -19,17 +21,58 @@ mat-toolbar {
   align-items: center;
 }
 
-.page-logo {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
+.header-container {
+  gap: 50px;
 
-  img {
-    max-width: 60px;
-    border-radius: 50%;
+  .brand {
+    align-items: center;
+
+    .page-logo {
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+
+      img {
+        max-width: 60px;
+        border-radius: 50%;
+      }
+    }
+
+    .page-title {
+      font-size: 24px;
+    }
   }
-}
 
-.page-title {
-  font-size: 24px;
+  .menu {
+    gap: 0px;
+
+    .menu-item {
+      .active-menu {
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: rgb(82, 82, 82);
+          position: relative;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .action-buttons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @include breakpoint("lg") {
+    gap: 0;
+    justify-content: space-between;
+
+    .action-buttons {
+      flex: 0;
+    }
+  }
 }

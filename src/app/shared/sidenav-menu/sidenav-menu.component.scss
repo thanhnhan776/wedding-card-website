@@ -1,0 +1,21 @@
+.sidenav-container {
+  width: 300px;
+
+  &.flex-column {
+    gap: 5px;
+  }
+
+  .flex-item {
+    .menu-button {
+      height: 50px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      text-align: left;
+
+      &.active-menu {
+        background-color: #33333322;
+      }
+    }
+  }
+}
