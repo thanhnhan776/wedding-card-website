@@ -19,9 +19,15 @@
   </div>
 
   <div class="feature-products-container flex-container center section">
-    <div class="container flex-column">
+    <div class="container margin flex-column">
       <h2>Sản phẩm nổi bật</h2>
-      <div class="feature-products"></div>
+      <div class="feature-products flex-container">
+        <app-product-box
+          *ngFor="let product of featureProduts"
+          class="flex-item"
+          [product]="product"
+        ></app-product-box>
+      </div>
     </div>
   </div>
 
