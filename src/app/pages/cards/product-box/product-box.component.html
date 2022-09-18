@@ -12,8 +12,12 @@
 
   <mat-card-actions align="end">
     <div class="flex-row action-buttons container center">
-      <button mat-flat-button color="primary">Xem</button>
-      <button mat-flat-button color="accent">Thêm vào giỏ</button>
+      <a mat-flat-button color="primary" [href]="productBaseHref + product?.id">
+        Xem
+      </a>
+      <button mat-flat-button color="accent" (click)="handleAddToCartClicked()">
+        Thêm vào giỏ
+      </button>
     </div>
   </mat-card-actions>
 </mat-card>
