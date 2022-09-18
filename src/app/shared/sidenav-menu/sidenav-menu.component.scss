@@ -1,3 +1,5 @@
+@import "../../../palette";
+
 .sidenav-container {
   width: 300px;
 
@@ -14,7 +16,7 @@
       text-align: left;
 
       &.active-menu {
-        background-color: #33333322;
+        background-color: map-get($map: $wedding-red, $key: A200);
       }
     }
   }

@@ -11,16 +11,18 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$wedding-card-website-primary: mat.define-palette(mat.$indigo-palette);
+@import "palette";
+
+$wedding-card-website-primary: mat.define-palette($wedding-red);
 $wedding-card-website-accent: mat.define-palette(
-  mat.$pink-palette,
+  mat.$amber-palette,
   A200,
   A100,
   A400
 );
 
 // The warn palette is optional (defaults to red).
-$wedding-card-website-warn: mat.define-palette(mat.$red-palette);
+$wedding-card-website-warn: mat.define-palette(mat.$deep-orange-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
