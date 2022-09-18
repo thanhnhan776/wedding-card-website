@@ -18,3 +18,24 @@ $breakpoints: (
     + " Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
+@function in-list($value, $list) {
+  @return (index($list, $value) != null);
+}
+
+$columns: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+@mixin flex-list($col, $gap: 30px) {
+  @if in-list($col, $columns) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $gap;
+
+    .flex-item {
+      flex: 0 1 calc(100% / $col - ($gap * ($col - 1) / $col));
+    }
+  } @else {
+    @error "NOT FOUND `#{$col}`."
+    + " Available columns are: #{$columns}.";
+  }
+}

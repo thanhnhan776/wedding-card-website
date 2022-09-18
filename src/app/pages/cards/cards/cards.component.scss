@@ -1,0 +1,17 @@
+@import "../../../../mixins";
+
+.products-container {
+  @include flex-list(4);
+
+  @include breakpoint("lg") {
+    @include flex-list(3);
+  }
+
+  @include breakpoint("md") {
+    @include flex-list(2);
+  }
+
+  @include breakpoint("xl") {
+    @include flex-list(1);
+  }
+}
