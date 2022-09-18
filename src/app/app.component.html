@@ -9,10 +9,12 @@
       <mat-sidenav #sidenav [autoFocus]="false" [(opened)]="isSidnavOpen">
         <app-sidenav-menu></app-sidenav-menu>
       </mat-sidenav>
+
       <mat-sidenav-content class="sidenav-content">
         <div class="sidenav-content-main-container">
           <router-outlet></router-outlet>
         </div>
+
         <app-footer></app-footer>
       </mat-sidenav-content>
     </mat-sidenav-container>
