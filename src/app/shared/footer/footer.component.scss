@@ -1,0 +1,21 @@
+.footer-container {
+  background-color: rgb(227, 229, 247);
+  margin-top: 40px;
+  padding-top: 20px;
+
+  [class^="flex-row"] {
+    gap: 40px;
+  }
+
+  .footer-content {
+    min-height: 200px;
+
+    .flex-item {
+      padding: 0 20px;
+    }
+  }
+
+  .copyright {
+    margin: 10px 0;
+  }
+}
