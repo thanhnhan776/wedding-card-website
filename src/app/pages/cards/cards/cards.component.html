@@ -1,1 +1,14 @@
-<p>cards works!</p>
+<div class="flex-container center">
+  <div class="container margin flex-column">
+    <h1 class="mat-display-1 page-title">Sản phẩm thiệp cưới</h1>
+
+    <div class="flex-container products-container">
+      <app-product-box
+        *ngFor="let product of products"
+        [product]="product"
+        class="card-item flex-item"
+      >
+      </app-product-box>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Mẫu thiệp cưới 01",
+    "price": 110000,
+    "imgURL": ["assets/products/card-001.jpg"]
+  },
+
+  {
+    "id": 2,
+    "name": "Mẫu thiệp cưới 02",
+    "price": 120000,
+    "imgURL": ["assets/products/card-002.jpg"]
+  },
+  {
+    "id": 3,
+    "name": "Mẫu thiệp cưới 03",
+    "price": 130000,
+    "imgURL": ["assets/products/card-003.jpg"]
+  },
+  {
+    "id": 4,
+    "name": "Mẫu thiệp cưới 04",
+    "price": 140000,
+    "imgURL": ["assets/products/card-004.jpg"]
+  },
+  {
+    "id": 5,
+    "name": "Mẫu thiệp cưới 05",
+    "price": 150000,
+    "imgURL": ["assets/products/card-005.jpg"]
+  },
+  {
+    "id": 6,
+    "name": "Mẫu thiệp cưới 06",
+    "price": 160000,
+    "imgURL": ["assets/products/card-006.jpg"]
+  },
+  {
+    "id": 7,
+    "name": "Mẫu thiệp cưới 07",
+    "price": 170000,
+    "imgURL": ["assets/products/card-007.jpg"]
+  },
+  {
+    "id": 8,
+    "name": "Mẫu thiệp cưới 08",
+    "price": 180000,
+    "imgURL": ["assets/products/card-008.jpg"]
+  },
+  {
+    "id": 9,
+    "name": "Mẫu thiệp cưới 09",
+    "price": 190000,
+    "imgURL": ["assets/products/card-009.jpg"]
+  }
+]

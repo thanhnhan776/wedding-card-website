@@ -28,7 +28,7 @@ mat-toolbar {
   .brand {
     align-items: center;
 
-    .page-logo {
+    .logo {
       margin-right: 10px;
       display: flex;
       align-items: center;
@@ -39,7 +39,7 @@ mat-toolbar {
       }
     }
 
-    .page-title {
+    .title {
       font-size: 24px;
     }
   }
@@ -74,6 +74,16 @@ mat-toolbar {
 
     .action-buttons {
       flex: 0;
+    }
+  }
+
+  @include breakpoint("md") {
+    .brand {
+      .logo {
+        img {
+          max-width: 40px;
+        }
+      }
     }
   }
 }
