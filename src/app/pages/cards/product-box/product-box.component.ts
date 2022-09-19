@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/data/product/product';
-import { ProductService } from 'src/app/data/product/product.service';
 
 @Component({
   selector: 'app-product-box',
@@ -9,8 +8,16 @@ import { ProductService } from 'src/app/data/product/product.service';
 })
 export class ProductBoxComponent implements OnInit {
   @Input() product: Product | undefined;
+  @Output() viewProductClicked = new EventEmitter<Product>();
+  @Output() addToCartClicked = new EventEmitter<Product>();
 
-  constructor(private productService: ProductService) {}
+  productBaseHref = 'cards';
+
+  constructor() {}
 
   ngOnInit(): void {}
+
+  handleAddToCartClicked(): void {
+    this.addToCartClicked.emit(this.product);
+  }
 }

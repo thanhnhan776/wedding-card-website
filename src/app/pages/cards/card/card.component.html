@@ -1,1 +1,29 @@
-<p>card works! {{ cardId ? cardId : "not-found" }}</p>
+<div class="flex-container center product-container">
+  <div *ngIf="product" class="container margin flex-column">
+    <div class="flex-row-md gap-2">
+      <div class="flex-item product-img-container col-4">
+        <img [src]="product.imgURL" alt="Product image" width="100%" />
+      </div>
+
+      <div class="flex-item flex-column flex-2-3 gap-1">
+        <div class="mat-display-1">
+          {{ product.name }}
+        </div>
+        <span>
+          {{ product.price | currency: "VND" }}
+        </span>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Số lượng</mat-label>
+            <input matInput type="number" value="1" />
+          </mat-form-field>
+        </div>
+
+        <div class="action-buttons flex-row-xl gap-1">
+          <button mat-flat-button color="primary">Mua ngay</button>
+          <button mat-flat-button color="accent">Thêm vào giỏ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

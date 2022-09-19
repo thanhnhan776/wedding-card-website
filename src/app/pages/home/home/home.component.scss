@@ -1,10 +1,19 @@
+@import "../../../../mixins";
+
 .brand-introduction {
   margin: 20px;
 }
 
 .feature-products {
-  background-color: rgb(150, 186, 240);
-  height: 500px;
+  @include flex-list(3);
+
+  @include breakpoint("lg") {
+    @include flex-list(2);
+  }
+
+  @include breakpoint("xl") {
+    @include flex-list(1);
+  }
 }
 
 .section {

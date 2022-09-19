@@ -20,4 +20,12 @@ export class ProductService {
       })
     );
   }
+
+  getFeatureProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>('assets/data/product/product.json').pipe(
+      map((products: Product[]) => {
+        return products.slice(0, 6);
+      })
+    );
+  }
 }

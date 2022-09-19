@@ -10,5 +10,6 @@ import { MaterialModule } from 'src/app/shared/material/material.module';
 @NgModule({
   declarations: [CardsComponent, CardComponent, ProductBoxComponent],
   imports: [CommonModule, MaterialModule, CardsRoutingModule],
+  exports: [ProductBoxComponent],
 })
 export class CardsModule {}

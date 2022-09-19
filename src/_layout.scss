@@ -31,6 +31,20 @@ $breakpoint-keys: "xs", "xm", "xl", "md", "lg";
   }
 }
 
+.flex-row,
+.flex-column {
+  $gaps: 1, 2, 3, 4;
+  @each $gap in $gaps {
+    .gap-#{$gap} {
+      gap: $gap * 1rem;
+    }
+  }
+
+  .flex-2-3 {
+    flex-grow: calc(2 / 3);
+  }
+}
+
 .flex-item {
   flex: 1;
 }
