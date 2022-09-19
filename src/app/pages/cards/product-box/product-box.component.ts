@@ -11,7 +11,7 @@ export class ProductBoxComponent implements OnInit {
   @Output() viewProductClicked = new EventEmitter<Product>();
   @Output() addToCartClicked = new EventEmitter<Product>();
 
-  productBaseHref = './cards/';
+  productBaseHref = 'cards';
 
   constructor() {}
 
